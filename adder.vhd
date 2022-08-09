@@ -13,7 +13,7 @@ architecture arch_adder of adder is
                 s,cout : out std_logic);
         end component fa;
     
-    signal carry : out std_logic_vector(15 downto 0);
+    signal carry : std_logic_vector(15 downto 0);
 
 
 begin
