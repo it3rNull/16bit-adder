@@ -14,6 +14,7 @@ architecture arch_adder of adder is
         end component fa;
     
     signal carry : std_logic_vector(15 downto 0);
+    signal temp_out : std_logic;
 
 
 begin
@@ -33,6 +34,7 @@ begin
     bit_12 : fa port map(a(12),b(12),carry(12),s(12),carry(13));
     bit_13 : fa port map(a(13),b(13),carry(13),s(13),carry(14));
     bit_14 : fa port map(a(14),b(14),carry(14),s(14),carry(15));
-    bit_15 : fa port map(a(15),b(15),carry(15),s(15),cout);
+    bit_15 : fa port map(a(15),b(15),carry(15),s(15),temp_out);
+    cout <= temp_out;
 
 end architecture arch_adder;
