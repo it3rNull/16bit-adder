@@ -19,8 +19,8 @@ begin
     map0 : adder port map(a_s,b_s,s_s,cout_s);
     calc1 : process
     begin
-        a_s <= '1011001101001010';
-        b_s <= '1010100101110111';
+        a_s <= "1011001101001010";
+        b_s <= "1010100101110111";
         wait for 40 ns;
     end process;
     
